@@ -18,9 +18,10 @@
             min-height: 100vh;
             background: linear-gradient(135deg, #a8d5ba 0%, #7eb88f 100%);
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             padding: 20px;
+            overflow-y: auto;
         }
         
         .container {
@@ -30,12 +31,10 @@
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             width: 600px;
-            height: 600px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            max-width: 90vw;
             position: relative;
             overflow: hidden;
+            margin: 20px auto;
         }
         
         .container::before {
@@ -145,23 +144,26 @@
         
         @media (max-width: 700px) {
             .container {
-                width: 90vw;
-                height: 90vw;
-                max-width: 500px;
-                max-height: 500px;
-                padding: 40px 30px;
+                padding: 30px;
+                width: 100%;
+                max-width: 100%;
+                border-radius: 15px;
             }
             
             h1 {
-                font-size: 28px;
+                font-size: 24px;
             }
             
             h2 {
-                font-size: 13px;
+                font-size: 11px;
             }
             
             p {
-                font-size: 15px;
+                font-size: 13px;
+            }
+            
+            .footer-note {
+                font-size: 10px;
             }
         }
         
